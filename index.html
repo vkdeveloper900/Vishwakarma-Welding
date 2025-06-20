@@ -24,15 +24,15 @@
 
 
 <body style="background-color: #121212; color: #e0e0e0;">
-<div id="preloader" class="d-flex flex-column justify-content-center align-items-center text-center">
-  <div class="spinner-grow text-danger mb-3" role="status" style="width: 3rem; height: 3rem;">
-    <span class="visually-hidden">Loading...</span>
+  <div id="preloader" class="d-flex flex-column justify-content-center align-items-center text-center">
+    <div class="spinner-grow text-danger mb-3" role="status" style="width: 3rem; height: 3rem;">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <div>
+      <p class="text-light mb-0">Loading...</p>
+      <small class="text-light">Developed by VK Developer</small>
+    </div>
   </div>
-  <div>
-    <p class="text-light mb-0">Loading...</p>
-    <small class="text-light">Developed by VK Developer</small>
-  </div>
-</div>
 
 
 
@@ -52,14 +52,39 @@
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="#works">Work</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#galleryModal">Gallery</a>
+              </li>
+
               <li class="nav-item"><a class="nav-link" href="#owners">Owner</a></li>
               <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
             </ul>
           </div>
-          <a href="https://wa.me/919783263108?text=Hello%20Vishwakarma%20Welding%20Works%2C%20I%20am%20interested%20in%20your%20welding%20services."
-            target="_blank" class="whatsapp-btn">
-            <i class="bi bi-whatsapp"></i>
-          </a>
+
+<!-- WhatsApp Dropdown -->
+<div class="dropdown">
+  <a class="btn btn-success dropdown-toggle whatsapp-btn" href="#" role="button" id="whatsappDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="whatsappDropdown">
+    <li>
+      <a class="dropdown-item" target="_blank"
+        href="https://wa.me/919783263108?text=Hello%20Motilal%20Suthar%2C%20I%20am%20interested%20in%20your%20services.">
+        📞 <strong>Motilal Suthar</strong><br><small class="text-muted">Founder & Director</small><br>
+        (+91 97832 63108)
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" target="_blank"
+        href="https://wa.me/919772926433?text=Hello%20Panna%20Lal%20Suthar%2C%20I%20am%20interested%20in%20your%20services.">
+        📞 <strong>Panna Lal Suthar</strong><br><small class="text-muted">Co-Founder</small><br>
+        (+91 97729 26433)
+      </a>
+    </li>
+  </ul>
+</div>
+
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -172,6 +197,7 @@
   </section>
 
 
+
   <!-- About Us -->
   <section class="about-section py-5" id="about">
     <div class="container">
@@ -253,18 +279,80 @@
     </div>
   </section>
 
-
-
-  <!-- Works -->
+  <!-- Works Section -->
   <section class="container py-5" id="works">
     <h2 class="section-title text-danger text-center mb-5">Our Works</h2>
     <div class="row g-4">
 
-      <!-- Work 1 -->
+      <!-- Work 1 - Recliner Iron Chair -->
       <div class="col-md-4">
         <div class="card work-card h-100">
-          <div class="img-container">
-            <img src="assets/imges/project/1.jpg" class="card-img-top" alt="Gate installation in Sayra">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/sleepingchair.jpeg', 'assets/imges/project/2.jpeg'])">
+            <img src="assets/imges/project/sleepingchair.jpeg" class="card-img-top" alt="Recliner Iron Chair in Sayra">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-danger">Recliner Iron Chair</h5>
+            <p class="mb-1"><strong>Location:</strong> Hotel Interior Installation</p>
+            <p class="card-text">Comfortable and rust-proof iron reclining chair — perfect for outdoor relaxation and
+              verandahs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work 2 - Main Gate Installation -->
+      <div class="col-md-4">
+        <div class="card work-card h-100">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/14.jpeg', 'assets/imges/project/3.jpeg'])">
+            <img src="assets/imges/project/14.jpeg" class="card-img-top" alt="Main Gate Installation">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-danger">Main Gate Installation</h5>
+            <p class="mb-1"><strong>Location:</strong> Gayfal, Udaipur – Owner's House</p>
+            <p class="card-text">Heavy-duty custom iron gate with powder coating for weather resistance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work 3 - Railing Installation -->
+      <div class="col-md-4">
+        <div class="card work-card h-100">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/13.jpeg', 'assets/imges/project/5.jpeg'])">
+            <img src="assets/imges/project/13.jpeg" class="card-img-top" alt="Railing installation on roof wall">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-danger">Railing Installation on Roof Wall</h5>
+            <p class="mb-1"><strong>Location:</strong> Gayfal, Udaipur – Owner's House</p>
+            <p class="card-text">Installation of a secure and stylish railing on the roof wall to ensure safety and
+              aesthetic appeal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work 4 - Designer Iron Chair -->
+      <div class="col-md-4">
+        <div class="card work-card h-100">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/chair.jpeg', 'assets/imges/project/6.jpeg'])">
+            <img src="assets/imges/project/chair.jpeg" class="card-img-top" alt="Designer Iron Chair in Udaipur">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-danger">Designer Iron Chair</h5>
+            <p class="mb-1"><strong>Location:</strong> Hotel Interior Installation</p>
+            <p class="card-text">Elegant hand-crafted iron chair, ideal for lawns, cafés, and decorative seating
+              arrangements.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work 5 - Gate Installation -->
+      <div class="col-md-4">
+        <div class="card work-card h-100">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/gate.jpeg', 'assets/imges/project/7.jpeg'])">
+            <img src="assets/imges/project/gate.jpeg" class="card-img-top" alt="Gate installation in Sayra">
           </div>
           <div class="card-body">
             <h5 class="card-title text-danger">Main Gate Installation</h5>
@@ -274,78 +362,191 @@
         </div>
       </div>
 
-      <!-- Work 2 -->
+      <!-- Work 6 - Decorative Fence Installation -->
       <div class="col-md-4">
         <div class="card work-card h-100">
-          <div class="img-container">
-            <img src="assets/imges/project/2.jpg" class="card-img-top" alt="Railing work in Udaipur">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/3.jpeg', 'assets/imges/project/8.jpeg'])">
+            <img src="assets/imges/project/3.jpeg" class="card-img-top"
+              alt="Fence installation at Shri Padmanam Bhajan Haveli">
           </div>
           <div class="card-body">
-            <h5 class="card-title text-danger">Steel Railings</h5>
-            <p class="mb-1"><strong>Location:</strong> Udaipur City Flats</p>
-            <p class="card-text">Elegant balcony railings with smooth finish and strong support structure.</p>
+            <h5 class="card-title text-danger">Decorative Fence Installation</h5>
+            <p class="mb-1"><strong>Location:</strong> Shri Padmanam Bhagawan Haveli, Sayra</p>
+            <p class="card-text">Installation of custom-designed yellow metal fencing for enhanced security and
+              aesthetic appeal at the Bhajan Haveli entrance.</p>
           </div>
         </div>
       </div>
 
-      <!-- Work 3 -->
+      <!-- Work 7 - Traditional Gate -->
       <div class="col-md-4">
         <div class="card work-card h-100">
-          <div class="img-container">
-            <img src="assets/imges/project/1.jpg" class="card-img-top" alt="Warehouse frames fabrication">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/10.jpeg', 'assets/imges/project/9.jpeg'])">
+            <img src="assets/imges/project/10.jpeg" class="card-img-top" alt="Traditional gate installation">
           </div>
           <div class="card-body">
-            <h5 class="card-title text-danger">Warehouse Frame Fabrication</h5>
-            <p class="mb-1"><strong>Location:</strong> Chittorgarh Industrial Area</p>
-            <p class="card-text">Heavy fabrication for structural steel columns and cross-bracing systems.</p>
+            <h5 class="card-title text-danger">Traditional Gate</h5>
+            <p class="mb-1"><strong>Location:</strong> Rural Rajasthan</p>
+            <p class="card-text">Custom-designed iron gate featuring Rajasthani warrior artwork and ornamental
+              detailing.</p>
           </div>
         </div>
       </div>
 
-      <!-- Work 1 -->
+      <!-- Work 8 - Modern Stair Railing -->
       <div class="col-md-4">
         <div class="card work-card h-100">
-          <div class="img-container">
-            <img src="assets/imges/project/1.jpg" class="card-img-top" alt="Gate installation in Sayra">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/8.jpeg', 'assets/imges/project/12.jpeg'])">
+            <img src="assets/imges/project/8.jpeg" class="card-img-top" alt="Modern indoor staircase railing">
           </div>
           <div class="card-body">
-            <h5 class="card-title text-danger">Main Gate Installation</h5>
-            <p class="mb-1"><strong>Location:</strong> Sayra Residential Complex</p>
-            <p class="card-text">Heavy-duty custom iron gate with powder coating for weather resistance.</p>
+            <h5 class="card-title text-danger">Modern Stair Railing</h5>
+            <p class="mb-1"><strong>Location:</strong> Residential Site</p>
+            <p class="card-text">Minimalistic and durable railing with stainless steel finish for indoor stair safety
+              and elegance.</p>
           </div>
         </div>
       </div>
 
-      <!-- Work 2 -->
+      <!-- Work 9 - Industrial Shed Roofing -->
       <div class="col-md-4">
         <div class="card work-card h-100">
-          <div class="img-container">
-            <img src="assets/imges/project/2.jpg" class="card-img-top" alt="Railing work in Udaipur">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/9.jpeg', 'assets/imges/project/11.jpeg'])">
+            <img src="assets/imges/project/9.jpeg" class="card-img-top" alt="Industrial roofing installation">
           </div>
           <div class="card-body">
-            <h5 class="card-title text-danger">Steel Railings</h5>
-            <p class="mb-1"><strong>Location:</strong> Udaipur City Flats</p>
-            <p class="card-text">Elegant balcony railings with smooth finish and strong support structure.</p>
+            <h5 class="card-title text-danger">Industrial Shed Roofing</h5>
+            <p class="mb-1"><strong>Location:</strong> Warehouse Zone</p>
+            <p class="card-text">Robust MS frame and sheet roofing installed for warehouse protection and weather
+              durability.</p>
           </div>
         </div>
       </div>
 
-      <!-- Work 3 -->
+      <!-- Work 10 - Designer Iron Main Door -->
       <div class="col-md-4">
         <div class="card work-card h-100">
-          <div class="img-container">
-            <img src="assets/imges/project/1.jpg" class="card-img-top" alt="Warehouse frames fabrication">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/7.jpeg', 'assets/imges/project/6.jpeg'])">
+            <img src="assets/imges/project/7.jpeg" class="card-img-top"
+              alt="Designer iron door with geometric patterns">
           </div>
           <div class="card-body">
-            <h5 class="card-title text-danger">Warehouse Frame Fabrication</h5>
-            <p class="mb-1"><strong>Location:</strong> Chittorgarh Industrial Area</p>
-            <p class="card-text">Heavy fabrication for structural steel columns and cross-bracing systems.</p>
+            <h5 class="card-title text-danger">Designer Iron Main Door</h5>
+            <p class="mb-1"><strong>Location:</strong> Private Residence</p>
+            <p class="card-text">Heavy-duty custom-made door with geometric accents in gold and silver for added
+              aesthetic appeal.</p>
           </div>
         </div>
       </div>
+
+      <!-- Work 11 - Temple Roofing Work -->
+      <div class="col-md-4">
+        <div class="card work-card h-100">
+          <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal"
+            onclick="openGallery(['assets/imges/project/temple.jpeg', 'assets/imges/project/15.jpeg'])">
+            <img src="assets/imges/project/12.jpeg" class="card-img-top" alt="Roofing work for temple construction">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-danger">Temple Roofing Work</h5>
+            <p class="mb-1"><strong>Location:</strong> Shri Mahadev Mandir, Udaipur</p>
+            <p class="card-text">High-quality roofing with ornamental detailing for religious institutions to withstand
+              seasonal variations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work 12 - Residential Boundary Wall Gate -->
+      <!-- <div class="col-md-4">
+      <div class="card work-card h-100">
+        <div class="img-container" data-bs-toggle="modal" data-bs-target="#galleryModal" onclick="openGallery(['assets/imges/project/boundary.jpeg', 'assets/imges/project/16.jpeg'])">
+          <img src="assets/imges/project/boundary.jpeg" class="card-img-top" alt="Boundary wall gate installation">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-danger">Residential Boundary Wall Gate</h5>
+          <p class="mb-1"><strong>Location:</strong> Udaipur Residential Area</p>
+          <p class="card-text">Custom-built gate with a robust boundary wall system for added security and aesthetics at residential properties.</p>
+        </div>
+      </div>
+    </div> -->
 
     </div>
   </section>
+
+
+  <!-- Modal for Image Gallery -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="galleryImages" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Hardcoded Images -->
+              <div class="carousel-item active">
+                <img src="assets/imges/project/sleepingchair.jpeg" class="d-block w-100" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/14.jpeg" class="d-block w-100" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/13.jpeg" class="d-block w-100" alt="Image 3">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/chair.jpeg" class="d-block w-100" alt="Image 4">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/gate.jpeg" class="d-block w-100" alt="Image 5">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/3.jpeg" class="d-block w-100" alt="Image 6">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/10.jpeg" class="d-block w-100" alt="Image 7">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/8.jpeg" class="d-block w-100" alt="Image 8">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/9.jpeg" class="d-block w-100" alt="Image 9">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/7.jpeg" class="d-block w-100" alt="Image 10">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/12.jpeg" class="d-block w-100" alt="Image 11">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/11.jpeg" class="d-block w-100" alt="Image 12">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/imges/project/6.jpeg" class="d-block w-100" alt="Image 13">
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryImages" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryImages" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 
   <!-- Our Pillars Section -->
@@ -373,11 +574,13 @@
                 <p>A visionary with over 25 years of hands-on experience in fabrication, customer relations, and
                   business growth. He laid the foundation of Vishwakarma Welding Works with trust and commitment to
                   quality.</p>
-                <div class="d-flex justify-content-center gap-3 mt-2">
-                  <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-                  <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-                  <a href="mailto:motilal@example.com" class="text-white"><i class="bi bi-envelope-fill"></i></a>
+                <div class="d-flex justify-content-center gap-3 fs-4 mt-3">
+                  <a href="https://wa.me/919783263108" class="text-white" target="_blank"><i
+                      class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.instagram.com/motilalsuthar08?igsh=MXNic2V6dXNjcmd2NQ==" class="text-white"
+                    target="_blank"><i class="bi bi-instagram"></i></a>
                 </div>
+
               </div>
             </div>
           </div>
@@ -402,18 +605,20 @@
                 <p class="mb-2"><strong>Co-Founder</strong></p>
                 <p>Leads the execution team with expertise in MIG, TIG, and structural welding. Known for his attention
                   to detail and ensuring timely delivery with precision and safety.</p>
-                <div class="d-flex justify-content-center gap-3 mt-2">
-                  <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-                  <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-                  <a href="mailto:pannalal@example.com" class="text-white"><i class="bi bi-envelope-fill"></i></a>
+                <div class="d-flex justify-content-center gap-3 fs-4 mt-3">
+                  <a href="https://wa.me/919772926433" class="text-white" target="_blank"><i
+                      class="bi bi-whatsapp"></i></a>
+                  <a href="https://www.instagram.com/pmsuthar97?igsh=NmhucHBmeTNvbHU=" class="text-white"
+                    target="_blank"><i class="bi bi-instagram"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
       </div>
+
+
+    </div>
     </div>
   </section>
 
@@ -468,9 +673,6 @@
 
 
 
-
-
-
   <!-- Map -->
   <section class="container py-5">
     <h2 class="section-title text-danger">Location</h2>
@@ -498,19 +700,24 @@
         </div>
 
         <!-- Center -->
-        <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
-          <h5 class="text-danger">Follow Us</h5>
-          <div class="d-flex gap-3 justify-content-center">
-            <a href="#" class="footer-icon facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="footer-icon instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/919783263108?text=Hello%20Vishwakarma%20Welding%20Works%2C%20I%20am%20interested%20in%20your%20welding%20services."
-              target="_blank" class="footer-icon whatsapp">
-              <i class="bi bi-whatsapp"></i>
-            </a>
+       <div class="col-md-4 mb-4 d-flex flex-column align-items-center">
+  <h5 class="text-danger">Follow Us</h5>
+  <div class="d-flex gap-3 justify-content-center">
+    <a href="https://wa.me/919783263108" target="_blank" class="footer-icon whatsapp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="https://wa.me/919772926433" target="_blank" class="footer-icon whatsapp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="https://www.instagram.com/motilalsuthar08?igsh=MXNic2V6dXNjcmd2NQ==" target="_blank" class="footer-icon instagram">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <a href="https://www.instagram.com/pmsuthar97?igsh=NmhucHBmeTNvbHU=" target="_blank" class="footer-icon instagram">
+      <i class="bi bi-instagram"></i>
+    </a>
+  </div>
+</div>
 
-            <a href="#" class="footer-icon youtube"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
 
 
 
@@ -522,8 +729,8 @@
             +91 97832 63108<br>
             +91 97729 26433
           </p>
-          <p class="text-muted"><strong>Email:</strong> <a href="mailto:info@vishwakarmaworks.in"
-              class="text-white">info@vishwakarmaworks.in</a></p>
+          <!-- <p class="text-muted"><strong>Email:</strong> <a href="mailto:info@vishwakarmaworks.in"
+              class="text-white">info@vishwakarmaworks.in</a></p> -->
         </div>
 
 
@@ -547,9 +754,9 @@
   </footer>
 
   <!-- Go To Top Button -->
-<button onclick="scrollToTop()" id="goTopBtn" title="Go to top">
-  <i class="bi bi-arrow-up-short fs-3"></i>
-</button>
+  <button onclick="scrollToTop()" id="goTopBtn" title="Go to top">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </button>
 
 
 
