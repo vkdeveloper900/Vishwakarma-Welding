@@ -39,8 +39,5 @@ A responsive static website built for Vishwakarma Welding Works, a trusted metal
 - JavaScript (vanilla)
 - Icons: Bootstrap Icons
 
-## 📞 Contact
 
-- 📧 Email: vishwakarmaworks.sayra@gmail.com
-- 📞 Phone: +91 97832 63108 / 97729 26433
 
