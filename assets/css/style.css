@@ -2,6 +2,21 @@ html {
   scroll-behavior: smooth;
 }
 
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
 
 
 

@@ -24,6 +24,20 @@
 // });
 
 
+
+
+   window.addEventListener("load", function () {
+    setTimeout(() => {
+      const preloader = document.getElementById("preloader");
+      preloader.classList.add("hidden");
+    }, 1000);
+  });
+
+
+
+
+
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
