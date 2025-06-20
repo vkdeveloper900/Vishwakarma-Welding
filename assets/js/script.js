@@ -26,12 +26,13 @@
 
 
 
-   window.addEventListener("load", function () {
-    setTimeout(() => {
-      const preloader = document.getElementById("preloader");
-      preloader.classList.add("hidden");
-    }, 1000);
-  });
+ window.addEventListener("load", function () {
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("hidden");
+  }, 300); // ultra short delay
+});
+
 
 
 
