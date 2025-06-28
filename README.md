@@ -2,10 +2,6 @@
 
 A responsive static website built for Vishwakarma Welding Works, a trusted metal fabrication and welding service provider based in Sayra, Rajasthan.
 
-## 🌐 Live Preview
-
-> (You can host this via GitHub Pages or any static hosting platform like Vercel/Netlify.)
-
 ## 📁 Project Structure
 
 ├── assets/
@@ -31,13 +27,3 @@ A responsive static website built for Vishwakarma Welding Works, a trusted metal
 - Flip cards for team (Our Pillars) and client showcase
 - Dark theme with vibrant highlights
 - Mobile-first design
-
-## 📸 Tech Stack
-
-- HTML5 / CSS3
-- Bootstrap 5
-- JavaScript (vanilla)
-- Icons: Bootstrap Icons
-
-
-
